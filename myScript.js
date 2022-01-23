@@ -1,17 +1,16 @@
-
 var mydiv=document.querySelector('#mydiv');
-mydiv.style.backgroundColor = 'green'
 var backColor = mydiv.style.backgroundColor;
+var color1 = 'lawngreen';
+var color2 = 'red';
+mydiv.style.backgroundColor = color1;
 
 mydiv.addEventListener('click', function(e) {
-    e.stopImmediatePropagation();
-
-    if (backColor === 'green') {
-        this.style.backgroundColor = 'red';
-        backColor = 'red';
+    if (backColor === color1) {
+        this.style.backgroundColor = color2;
+        backColor = color2;
     } else {
-        this.style.backgroundColor = 'green';
-        backColor = 'green';
+        this.style.backgroundColor = color1;
+        backColor = color1;
     }
 });
 
